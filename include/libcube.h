@@ -1,12 +1,12 @@
 /*  =========================================================================
-    libbbc - public header
+    libcube - public header
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
 */
 
-#ifndef __LIBBBC_H_INCLUDED__
-#define __LIBBBC_H_INCLUDED__
+#ifndef __LIBCUBE_H_INCLUDED__
+#define __LIBCUBE_H_INCLUDED__
 
 // External dependencies
 
@@ -37,29 +37,41 @@
 #endif
 
 // version macros for compile-time API detection
-#define LIBBBC_VERSION_MAJOR 0
-#define LIBBBC_VERSION_MINOR 1
-#define LIBBBC_VERSION_PATCH 0
+#define LIBCUBE_VERSION_MAJOR 0
+#define LIBCUBE_VERSION_MINOR 1
+#define LIBCUBE_VERSION_PATCH 0
 
 #define ER_MAKE_VERSION(major, minor, patch) \
     ((major) * 10000 + (minor) * 100 + (patch))
-#define LIBBBC_VERSION \
-    LIBBBC_MAKE_VERSION(LIBBBC_VERSION_MAJOR, \
-    LIBBBC_VERSION_MINOR, \
-    LIBBBC_VERSION_PATCH)
+#define LIBCUBE_VERSION \
+    LIBCUBE_MAKE_VERSION(LIBCUBE_VERSION_MAJOR, \
+    LIBCUBE_VERSION_MINOR, \
+    LIBCUBE_VERSION_PATCH)
 
 // Common function types
 
+// Destroy an object
 typedef void (*destructor_t) (void **obj_p);
+
+// Compare two objects, for sorting
 typedef int (*comparator_t) (const void *obj1, const void *obj2);
+
+// Check if two objects are equal
 typedef bool (*matcher_t) (const void *obj1, const void *obj2);
+
+// Create object by duplication
 typedef void *(*duplicator_t) (const void *obj);
+
+// Copy object to another place
 typedef void (*copier_t) (void *dest, const void *src);
+
+// Display information of object
 typedef void (*printer_t) (const void *obj);
+
+// Hash function of object
 typedef size_t (*hashfunc_t) (const void *obj);
 
 // Public class structures
-
 typedef struct _arrayset_t arrayset_t;
 typedef struct _hash_t hash_t;
 typedef struct _listu_t listu_t;

@@ -1,5 +1,5 @@
 /*  =========================================================================
-    numeric - extension of numeric types (int, double, size_t, id, ...)
+    numeric_ext - extension of numeric types (int, double, size_t, id, ...)
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
@@ -45,9 +45,12 @@ inline int int_compare (const int *a, const int *b) {
 #define max3(a, b, c) ((a) > (b) ? ((a) > (c) ? (a) : (c)) : ((b) > (c) ? (b) : (c)))
 #define min3(a, b, c) ((a) < (b) ? ((a) < (c) ? (a) : (c)) : ((b) < (c) ? (b) : (c)))
 
-// Factorial for small numbers (tested <= 65)
-// Will return SIZE_MAX if overflows
+// Factorial for small numbers (tested <= 65).
+// Return SIZE_MAX when overflow happens.
 size_t factorial (size_t n);
+
+// Hash function of integer
+size_t int_hash (const int *int_p);
 
 #ifdef __cplusplus
 }

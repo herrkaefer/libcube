@@ -2084,7 +2084,7 @@ static listx_t *string_heuristic (str_evol_context_t *context,
                                   size_t max_expected) {
     listx_t *list = listx_new ();
     for (size_t cnt = 0; cnt < max_expected; cnt++)
-        listx_append (list, string_random_alphanum (2, 10, context->rng));
+        listx_append (list, string_new_random_alphanum (2, 10, context->rng));
     return list;
 }
 

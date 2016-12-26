@@ -1,5 +1,5 @@
 /*  =========================================================================
-    stringext - implementation
+    string_ext - implementation
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
@@ -23,13 +23,6 @@ size_t string_hash (const char *string) {
 
 int string_compare (const char *str1, const char *str2) {
     return strcmp (str1, str2);
-    // int result = strcmp (string1, string2);
-    // if (result < 0)
-    //     return -1;
-    // else if (result > 0)
-    //     return 1;
-    // else
-    //     return 0;
 }
 
 
@@ -62,7 +55,9 @@ void string_print (const char *string) {
 }
 
 
-char *string_random_alphanum (size_t min_length, size_t max_length, rng_t *rng) {
+char *string_new_random_alphanum (size_t min_length,
+                                  size_t max_length,
+                                  rng_t *rng) {
     assert (min_length <= max_length);
 
     bool own_rng = false;

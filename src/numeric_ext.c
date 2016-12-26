@@ -19,3 +19,8 @@ size_t factorial (size_t n) {
     }
     return f;
 }
+
+
+size_t int_hash (const int *int_p) {
+    return (size_t) *int_p;
+}

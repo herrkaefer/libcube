@@ -1,5 +1,5 @@
 /*  =========================================================================
-    stringext - extension of string type
+    string_ext - extension of string type
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
@@ -17,28 +17,28 @@ extern "C" {
 
 #define UUID_STR_LEN 32
 
-// String hash function
+// Hash function
 size_t string_hash (const char *string);
 
-// Compare two strings
+// Comparator
 int string_compare (const char *str1, const char *str2);
 
-// If two strings are equal
+// Matcher
 bool string_equal (const char *str1, const char *str2);
 
-// Free a string
+// Destructor
 void string_free (char **string_p);
 
-// Duplicate a string
+// Duplicator
 char *string_duplicate (const char *string);
 
-// Print a string
+// Printer
 void string_print (const char *string);
 
 // Generate a random string consisting of alpha-numeric characters with
 // specific length range.
 // Provide your rng or set it to NULL to use a inner one.
-char *string_random_alphanum (size_t min_length, size_t max_length, rng_t *rng);
+char *string_new_random_alphanum (size_t min_length, size_t max_length, rng_t *rng);
 
 // String Levenshtein distance.
 // Modified from:
