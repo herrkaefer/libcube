@@ -1,3 +1,9 @@
+#  =========================================================================
+#  libcube makefile
+#
+#  Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
+#  =========================================================================
+
 IDIR = /usr/local/include
 ODIR = build
 SRCDIR = src

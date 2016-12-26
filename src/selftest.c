@@ -16,14 +16,14 @@ static test_item_t
 all_tests [] = {
 // #ifdef WITH_DRAFTS
     { "arrayset", arrayset_test },
-    // { "hash", hash_test },
-    // { "listu", listu_test },
-    // { "listx", listx_test },
-    // { "matrixd", matrixd_test },
-    // { "matrixu", matrixu_test },
-    // { "queue", queue_test },
-    // { "rng", rng_test },
-    // { "timer", timer_test },
+    { "hash", hash_test },
+    { "listu", listu_test },
+    { "listx", listx_test },
+    { "matrixd", matrixd_test },
+    { "matrixu", matrixu_test },
+    { "queue", queue_test },
+    { "rng", rng_test },
+    { "timer", timer_test },
     // { "evol", evol_test },
 // #endif // WITH_DRAFTS
     {0, 0}          //  Sentinel

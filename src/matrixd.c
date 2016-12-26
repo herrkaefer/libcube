@@ -1,6 +1,8 @@
 /*  =========================================================================
     matrixd - implementation
 
+    Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
+
     An illustration:
 
     Internally, values of a square matrix with large enough size are stored in
@@ -12,7 +14,6 @@
     9 10 11 12  |
     ------>------
 
-    Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
 */
 
@@ -21,7 +22,7 @@
 
 #define VTYPE double // type of data value
 #define VTYPE_NONE DOUBLE_NONE // none value
-#define MATRIX4D_DEFAULT_ORDER 16
+#define MATRIXD_DEFAULT_ORDER 16
 
 
 struct _matrixd_t {
@@ -64,7 +65,7 @@ matrixd_t *matrixd_new (size_t initial_rows, size_t initial_cols) {
     size_t initial_order =
         (initial_rows > initial_cols) ? initial_rows : initial_cols;
     if (initial_order == 0)
-        initial_order = MATRIX4D_DEFAULT_ORDER;
+        initial_order = MATRIXD_DEFAULT_ORDER;
     self->data =
         (VTYPE *) malloc (sizeof (VTYPE) * initial_order * initial_order);
     assert (self->data);

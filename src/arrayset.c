@@ -24,9 +24,7 @@ struct _arrayset_t {
     size_t length; // number of entries plus holes
     size_t alloced; // size of alloced memory
     size_t cursor; // entry id for iteration
-
     queue_t *holes; // record of removed nodes. A FIFO queue.
-
     hash_t *hash; // an optional hash table for indexing data by foreign key
     destructor_t destructor; // free function for data
 };
