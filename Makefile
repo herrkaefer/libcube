@@ -39,25 +39,27 @@ _MODULES = arrayi \
 
 _OBJS = $(_MODULES:=.o)
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
-LIBTARGET = libbbc.a
+LIBTARGET = libcube.a
 TESTOBJS = $(OBJS) $(ODIR)/selftest.o
 TESTTARGET = $(TARGETDIR)/selftest
+INSTALLPREFIX = /usr/local
 
-.PHONY: clib cdll test clean
+.PHONY: clib install test clean
 
 $(ODIR)/%.o: $(SRCDIR)/%.c
 	@mkdir -p $(@D)
 	$(CC) -c $< -o $@ $(CFLAGS)
 
-test: $(TESTOBJS)
-	$(CC) -o $(TESTTARGET) $(TESTOBJS) $(CFLAGS) $(LDIR) $(LIBS)
-	$(TESTTARGET)
-
 clib: $(OBJS)
 	ar rcs $(LIBTARGET) $(OBJS)
 
-cdll: $(OBJS)
-	$(CC) -shared -o $@ $^ -Wl,--out-implib,$(LIBTARGET) $(LDIR) $(LIBS)
+install: clib
+	install $(LIBTARGET) $(INSTALLPREFIX)/lib
+	install -m 0644 include/*.h $(INSTALLPREFIX)/include
+
+test: $(TESTOBJS)
+	$(CC) -o $(TESTTARGET) $(TESTOBJS) $(CFLAGS) $(LDIR) $(LIBS)
+	$(TESTTARGET)
 
 clean:
 	rm -rf $(TARGETDIR)/* *.dll *.a py/*so $(ODIR)/* py/*.c
