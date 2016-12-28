@@ -127,8 +127,8 @@ listx_t *string_cut_and_splice (const char *str1,
     }
 
     // cut before the following indexes
-    size_t cut1 = (size_t) rng_random_int (rng, 0, len1+1);
-    size_t cut2 = (size_t) rng_random_int (rng, 0, len2+1);
+    size_t cut1 = (size_t) rng_random_int (rng, 0, len1);
+    size_t cut2 = (size_t) rng_random_int (rng, 0, len2);
 
     size_t len1c = cut1 + len2 - cut2;
     size_t len2c = cut2 + len1 - cut1;

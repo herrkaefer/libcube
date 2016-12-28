@@ -18,12 +18,14 @@ rng_t *rng_new (void) {
     rng_t *self = (rng_t *) malloc (sizeof (rng_t));
     assert (self);
 
-    uint64_t seeds[2];
-    entropy_getbytes ((void *) seeds, sizeof (seeds));
-    pcg32_srandom_r (&self->rng, seeds[0], seeds[1]);
+    // Valgrind will report uninitilization errors if the following seeding
+    // approach is used.
+    // uint64_t seeds[2];
+    // entropy_getbytes ((void *) seeds, sizeof (seeds));
+    // pcg32_srandom_r (&self->rng, seeds[0], seeds[1]);
 
-    // "quick and dirty way to do the initialization"
-    // pcg32_srandom_r(&self->rng, time(NULL), (intptr_t)&self->rng);
+    // Quick and dirty way to seed
+    pcg32_srandom_r(&self->rng, time(NULL), (intptr_t)&self->rng);
 
     print_info ("rng created.\n");
     return self;
@@ -34,7 +36,6 @@ void rng_free (rng_t **self_p) {
     assert (self_p);
     if (*self_p) {
         rng_t *self = *self_p;
-
         free (self);
         *self_p = NULL;
     }
