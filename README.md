@@ -4,58 +4,74 @@
 
 ``libcube`` — handy building cubes for C.
 
-## arrayset
+## Modules
+
+### arrayset
 
 Set with a built-in hash table, implemented with array.
 
-## hash
+### hash
 
 Hash table, or dictionary.
 
-## listu
+### listu
 
 List container of usigned integers implemented with array.
 
-## listx
+### listx
 
 Generic double-linked list container.
 
-## matrixd / matrixu
+### matrixd / matrixu
 
 Double / size_t type dense matrix. You set and get, it resize silently.
 
-## queue
+### queue
 
 Simple queue container, implemented with double-linked list.
 
-## rng
+### rng
 
 Random number generator. A wrapper of [PCG](http://www.pcg-random.org/) RNGs.
 
-## timer
+### timer
 
 Timer.
 
-## arrayi
+### arrayi
 
 Extension of int type array.
 
-## arrayu
+### arrayu
 
 Extension of size_t type array.
 
-## date_ext
+### date_ext
 
 Extension of date type.
 
-## numeric_ext
+### numeric_ext
 
 Extension of numeric type.
 
-## string_ext
+### string_ext
 
-Extension of string type
+Extension of string type.
 
-## evol
+### evol
 
 An evolutionary algorithm framework.
+
+## Building
+
+To build the library
+
+```sh
+make
+```
+
+To install
+
+```sh
+make install
+```

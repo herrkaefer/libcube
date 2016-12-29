@@ -12,16 +12,28 @@
 extern "C" {
 #endif
 
-// shuffle the n elements of array in place.
+// Create array with given length
+int *arrayi_new (int length);
+
+// Create array of random permutation of integers in [a, b)
+int *arrayi_new_shuffle_range (int a, int b, rng_t *rng);
+
+// Duplicator
+int *arrayi_dup (const int *array, size_t length);
+
+// Shuffle the n elements of array in place
 void arrayi_shuffle (int *array, size_t length, rng_t *rng);
 
-// get a shuffled copy of the n elements of array
-// Return result in param dest
-void arrayi_shuffle_out (int *dest, const int *src, size_t length, rng_t *rng);
+// Get a shuffled copy of the n elements of array.
+int *arrayi_dup_shuffle (const int *array, size_t length, rng_t *rng);
 
-// generate random permutation of integers in [a, b)
-// Return result in param array
-void arrayi_shuffle_range (int *array, int a, int b, rng_t *rng);
+// Get a shuffled copy of the n elements of array.
+// Return result in param dest
+void arrayi_shuffle_to (int *dest, const int *src, size_t length, rng_t *rng);
+
+// Generate random permutation of integers in [a, b).
+// Return result in param array.
+void arrayi_shuffle_range_to (int *array, int a, int b, rng_t *rng);
 
 #ifdef __cplusplus
 }
