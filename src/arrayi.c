@@ -16,7 +16,7 @@ int *arrayi_new (int length) {
 
 
 int *arrayi_new_shuffle_range (int a, int b, rng_t *rng) {
-    assert (a <= b);
+    assert (a < b);
 
     bool own_rng = false;
     if (rng == NULL) {
@@ -108,7 +108,7 @@ void arrayi_shuffle_to (int *dest, const int *src, size_t length, rng_t *rng) {
 
 void arrayi_shuffle_range_to (int *array, int a, int b, rng_t *rng) {
     assert (array);
-    assert (a <= b);
+    assert (a < b);
     bool own_rng = false;
     if (rng == NULL) {
         rng = rng_new ();
