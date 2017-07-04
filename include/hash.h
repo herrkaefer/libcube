@@ -12,20 +12,22 @@
 extern "C" {
 #endif
 
-// Create a new hash table
+// Create a new hash table.
+// function hashfunc is the hash function of item's key.
+// function key_matcher is used to check if keys of two items are equal.
 hash_t *hash_new (hashfunc_t hashfunc, matcher_t key_matcher);
 
 // Destroy a hash table
 void hash_free (hash_t **self_p);
 
 // Set destructors of key and value structures. Default: NULL.
-// If set, hash table is responsible for freeing the key or value after using it.
+// If set, hash table is responsible for freeing keys or values after using them.
 void hash_set_destructors (hash_t *self,
                            destructor_t key_destructor,
                            destructor_t value_destructor);
 
 // Set duplicators of key and value structures. Default: NULL.
-// If set, key or value will be duplications are inserted to hash table rather
+// If set, duplications of keys or values will be inserted into hash table rather
 // than the original one.
 void hash_set_duplicators (hash_t *self,
                            duplicator_t key_duplicator,
@@ -52,7 +54,7 @@ void *hash_insert_nq (hash_t *self, void *key, void *value);
 // Return the item handle.
 void *hash_update (hash_t *self, void *key, void *value);
 
-// Look up item in a hash table by key.
+// Look up item in hash table by key.
 // Return the item handle.
 void *hash_lookup_item (hash_t *self, const void *key);
 

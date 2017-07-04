@@ -48,6 +48,7 @@
     LIBCUBE_VERSION_MINOR, \
     LIBCUBE_VERSION_PATCH)
 
+// ----------------------------------------------------------------------------
 // Common function types
 
 // Destroy an object
@@ -71,6 +72,7 @@ typedef void (*printer_t) (const void *obj);
 // Hash function of object
 typedef size_t (*hashfunc_t) (const void *obj);
 
+// ----------------------------------------------------------------------------
 // Public class structures
 typedef struct _arrayset_t arrayset_t;
 typedef struct _hash_t hash_t;
@@ -148,6 +150,5 @@ typedef struct _evol_t evol_t;
 #include "rng.h"
 #include "string_ext.h"
 #include "timer.h"
-#include "util.h"
 
 #endif

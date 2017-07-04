@@ -14,5 +14,6 @@
 // Private class structures
 
 // Internal API headers
+#include "util.h"
 
 #endif

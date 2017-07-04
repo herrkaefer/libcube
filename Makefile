@@ -13,6 +13,7 @@ TARGETDIR = bin
 CC = gcc
 CFLAGS = -I$(IDIR) -g -Wall
 # CFLAGS += -DWITHSTATS
+CFLAGS += -DNDEBUG
 CFLAGS += -O3
 CFLAGS += -std=c99
 
