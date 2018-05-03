@@ -41,7 +41,7 @@
 #define LIBCUBE_VERSION_MINOR 1
 #define LIBCUBE_VERSION_PATCH 0
 
-#define ER_MAKE_VERSION(major, minor, patch) \
+#define LIBCUBE_MAKE_VERSION(major, minor, patch) \
     ((major) * 10000 + (minor) * 100 + (patch))
 #define LIBCUBE_VERSION \
     LIBCUBE_MAKE_VERSION(LIBCUBE_VERSION_MAJOR, \

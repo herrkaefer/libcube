@@ -1,7 +1,7 @@
 /*  =========================================================================
     rng - random number generator.
 
-    A wrapper of [PCG](http://www.pcg-random.org/) RNGs.
+    A wrapper of [PCG](http://www.pcg-random.org/) RNGs (C implementation).
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
