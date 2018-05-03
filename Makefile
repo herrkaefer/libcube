@@ -63,4 +63,4 @@ test: $(TESTOBJS)
 	$(TESTTARGET)
 
 clean:
-	rm -rf $(TARGETDIR)/* *.dll *.a py/*so $(ODIR)/* py/*.c
+	rm -rf $(TARGETDIR)/* *.dll *.a $(ODIR)/*
