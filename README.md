@@ -1,4 +1,4 @@
-![](https://ws2.sinaimg.cn/large/006tKfTcgy1fqyinem3k5j30ru0hnmxs.jpg)
+![](https://ws2.sinaimg.cn/large/006tKfTcly1fqyius8nkvj30go0akdhb.jpg)
 
 # libcube
 
