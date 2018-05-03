@@ -64,16 +64,11 @@ Extension of string type.
 
 An evolutionary algorithm framework.
 
-## Building
-
-To build the library
+## Build and install
 
 ```sh
+git clone https://github.com/herrkaefer/libcube.git
+cd libcube
 make
-```
-
-To install
-
-```sh
 make install
 ```
