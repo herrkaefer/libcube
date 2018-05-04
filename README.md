@@ -6,6 +6,8 @@
 
 ``libcube`` — handy building cubes for C.
 
+The code style adheres to ["The C Language Style for Scalability (CLASS)"](https://rfc.zeromq.org/spec:21/CLASS/).
+
 ## Modules
 
 ### arrayset
