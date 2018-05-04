@@ -72,3 +72,7 @@ cd libcube
 make
 make install
 ```
+
+## License
+
+Mozilla Public License Version 2.0
