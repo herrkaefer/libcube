@@ -1,14 +1,16 @@
-            _____ ______  _______ _     _ ______  _______
-     |        |   |_____] |       |     | |_____] |______
-     |_____ __|__ |_____] |_____  |_____| |_____] |______
+            _____ ______  _______ _    _  _____
+     |        |   |_____] |______  \  /  |     | |
+     |_____ __|__ |_____] |______   \/   |_____| |_____
 
 ![Language](https://img.shields.io/badge/language-C-lightgrey.svg?style=flat)
 
-``libcube`` — handy building cubes for C.
-
-The code style adheres to ["The C Language Style for Scalability (CLASS)"](https://rfc.zeromq.org/spec:21/CLASS/).
+``libevol`` — An evolutionary algorithm framework in pure C.
 
 ## Modules
+
+### evol
+
+An evolutionary algorithm framework.
 
 ### arrayset
 
@@ -61,10 +63,6 @@ Extension of numeric type.
 ### string_ext
 
 Extension of string type.
-
-### evol
-
-An evolutionary algorithm framework.
 
 ## Build and install
 
