@@ -6,11 +6,17 @@
 
 ``libevol`` — An evolutionary algorithm framework in pure C.
 
-## Modules
 
-### evol
+## Usage
 
-An evolutionary algorithm framework.
+A demo with string can be found in `evol_test()` in `src/evol.c`.
+
+
+## Evol module
+
+The evolutionary algorithm framework. Detailed explanation of the model will be added in the future.
+
+## Helper contrainers
 
 ### arrayset
 
@@ -64,6 +70,7 @@ Extension of numeric type.
 
 Extension of string type.
 
+
 ## Build and install
 
 ```sh
@@ -72,6 +79,7 @@ cd libevol
 make
 make install
 ```
+
 
 ## License
 
