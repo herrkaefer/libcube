@@ -9,7 +9,7 @@
 #define __CLASSES_H_INCLUDED__
 
 // External APIs
-#include "../include/libcube.h"
+#include "../include/libevol.h"
 
 // Private class structures
 

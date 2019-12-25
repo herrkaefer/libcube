@@ -67,8 +67,8 @@ Extension of string type.
 ## Build and install
 
 ```sh
-git clone https://github.com/herrkaefer/libcube.git
-cd libcube
+git clone https://github.com/herrkaefer/libevol.git
+cd libevol
 make
 make install
 ```

@@ -1,5 +1,5 @@
 #  =========================================================================
-#  libcube makefile
+#  libevol makefile
 #
 #  Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
 #  =========================================================================
@@ -40,7 +40,7 @@ _MODULES = arrayi \
 
 _OBJS = $(_MODULES:=.o)
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
-LIBTARGET = libcube.a
+LIBTARGET = libevol.a
 TESTOBJS = $(OBJS) $(ODIR)/selftest.o
 TESTTARGET = $(TARGETDIR)/selftest
 INSTALLPREFIX = /usr/local
@@ -59,6 +59,7 @@ install: clib
 	install -m 0644 include/*.h $(INSTALLPREFIX)/include
 
 test: $(TESTOBJS)
+	mkdir -p $(TARGETDIR)
 	$(CC) -o $(TESTTARGET) $(TESTOBJS) $(CFLAGS) $(LDIR) $(LIBS)
 	$(TESTTARGET)
 

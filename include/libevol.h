@@ -1,12 +1,12 @@
 /*  =========================================================================
-    libcube - public header
+    libevol - public header
 
     Copyright (c) 2016, Yang LIU <gloolar@gmail.com>
     =========================================================================
 */
 
-#ifndef __LIBCUBE_H_INCLUDED__
-#define __LIBCUBE_H_INCLUDED__
+#ifndef __LIBEVOL_H_INCLUDED__
+#define __LIBEVOL_H_INCLUDED__
 
 // External dependencies
 
@@ -37,16 +37,16 @@
 #endif
 
 // version macros for compile-time API detection
-#define LIBCUBE_VERSION_MAJOR 0
-#define LIBCUBE_VERSION_MINOR 1
-#define LIBCUBE_VERSION_PATCH 0
+#define LIBEVOL_VERSION_MAJOR 0
+#define LIBEVOL_VERSION_MINOR 1
+#define LIBEVOL_VERSION_PATCH 0
 
-#define LIBCUBE_MAKE_VERSION(major, minor, patch) \
+#define LIBEVOL_MAKE_VERSION(major, minor, patch) \
     ((major) * 10000 + (minor) * 100 + (patch))
-#define LIBCUBE_VERSION \
-    LIBCUBE_MAKE_VERSION(LIBCUBE_VERSION_MAJOR, \
-    LIBCUBE_VERSION_MINOR, \
-    LIBCUBE_VERSION_PATCH)
+#define LIBEVOL_VERSION \
+    LIBEVOL_MAKE_VERSION(LIBEVOL_VERSION_MAJOR, \
+    LIBEVOL_VERSION_MINOR, \
+    LIBEVOL_VERSION_PATCH)
 
 // ----------------------------------------------------------------------------
 // Common function types
